@@ -1,0 +1,153 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@import './dark.css';
+@import './light.css';
+
+@media (prefers-color-scheme: dark) {
+  .system {
+    color-scheme: dark;
+    color: var(--on-background);
+    background-color: var(--background);
+  }
+  .system {
+    --primary: rgb(255 181 160);
+    --surface-tint: rgb(255 181 160);
+    --on-primary: rgb(86 31 15);
+    --primary-container: rgb(114 53 35);
+    --on-primary-container: rgb(255 219 209);
+    --secondary: rgb(231 189 178);
+    --on-secondary: rgb(68 42 34);
+    --secondary-container: rgb(93 64 55);
+    --on-secondary-container: rgb(255 219 209);
+    --tertiary: rgb(216 197 141);
+    --on-tertiary: rgb(59 47 5);
+    --tertiary-container: rgb(83 70 25);
+    --on-tertiary-container: rgb(246 225 167);
+    --error: rgb(255 180 171);
+    --on-error: rgb(105 0 5);
+    --error-container: rgb(147 0 10);
+    --on-error-container: rgb(255 218 214);
+    --background: rgb(26 17 15);
+    --on-background: rgb(241 223 218);
+    --surface: rgb(26 17 15);
+    --on-surface: rgb(241 223 218);
+    --surface-variant: rgb(83 67 63);
+    --on-surface-variant: rgb(216 194 188);
+    --outline: rgb(160 140 135);
+    --outline-variant: rgb(83 67 63);
+    --shadow: rgb(0 0 0);
+    --scrim: rgb(0 0 0);
+    --inverse-surface: rgb(241 223 218);
+    --inverse-on-surface: rgb(57 46 43);
+    --inverse-primary: rgb(143 76 56);
+    --surface-container: rgb(39 29 27);
+    --surface-container-high: rgb(50 40 37);
+    --surface-container-highest: rgb(61 50 47);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .system {
+    color-scheme: light;
+    color: var(--on-background);
+    background-color: var(--background);
+  }
+  .system {
+    --primary: rgb(143 76 56);
+    --surface-tint: rgb(143 76 56);
+    --on-primary: rgb(255 255 255);
+    --primary-container: rgb(255 219 209);
+    --on-primary-container: rgb(114 53 35);
+    --secondary: rgb(119 87 78);
+    --on-secondary: rgb(255 255 255);
+    --secondary-container: rgb(255 219 209);
+    --on-secondary-container: rgb(93 64 55);
+    --tertiary: rgb(108 93 47);
+    --on-tertiary: rgb(255 255 255);
+    --tertiary-container: rgb(246 225 167);
+    --on-tertiary-container: rgb(83 70 25);
+    --error: rgb(186 26 26);
+    --on-error: rgb(255 255 255);
+    --error-container: rgb(255 218 214);
+    --on-error-container: rgb(147 0 10);
+    --background: rgb(255 248 246);
+    --on-background: rgb(35 25 23);
+    --surface: rgb(255 248 246);
+    --on-surface: rgb(35 25 23);
+    --surface-variant: rgb(245 222 216);
+    --on-surface-variant: rgb(83 67 63);
+    --outline: rgb(133 115 110);
+    --outline-variant: rgb(216 194 188);
+    --shadow: rgb(0 0 0);
+    --scrim: rgb(0 0 0);
+    --inverse-surface: rgb(57 46 43);
+    --inverse-on-surface: rgb(255 237 232);
+    --inverse-primary: rgb(255 181 160);
+    --surface-container: rgb(252 234 229);
+    --surface-container-high: rgb(247 228 224);
+    --surface-container-highest: rgb(241 223 218);
+  }
+}
+
+.dark,
+.light {
+  color: var(--on-background);
+  background-color: var(--background);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--surface-container);
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--surface-container);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 6px;
+  border: 2px solid var(--surface-container);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-container);
+}
+
+a {
+  font-weight: 500;
+  color: var(--secondary);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--secondary-container);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background);
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}

@@ -1,0 +1,62 @@
+button {
+  padding: 10px 16px;
+  margin: 0;
+  cursor: pointer;
+  background-color: var(--primary);
+  color: var(--on-primary);
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--primary-container);
+  color: var(--on-primary-container);
+}
+
+button:active {
+  opacity: 0.8;
+}
+
+.button-secondary {
+  background-color: var(--secondary);
+  color: var(--on-secondary);
+}
+
+.button-secondary:hover {
+  background-color: var(--secondary-container);
+  color: var(--on-secondary-container);
+}
+
+.delete-btn {
+  padding: 6px 12px;
+  background-color: var(--error);
+  color: var(--on-error);
+  font-size: 13px;
+  min-width: auto;
+}
+
+.delete-btn:hover {
+  background-color: var(--error-container);
+  color: var(--on-error-container);
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--outline);
+  color: var(--on-surface);
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-toggle:hover {
+  background-color: var(--surface-container-high);
+}

@@ -1,0 +1,11 @@
+{
+  "name": "sce4-lab",
+  "private": true,
+  "scripts": {
+    "preinstall": "echo 'Direct package installation is disabled. Use bun commands in the front/ directory.' && exit 1",
+    "dev": "cd front && bun run dev",
+    "build": "cd front && bun run build",
+    "lint": "cd front && bun run lint",
+    "preview": "cd front && bun run preview"
+  }
+}

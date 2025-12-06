@@ -1,0 +1,43 @@
+{
+	"name": "SQL Server & ASP.NET Web API",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "devcontainer",
+	"workspaceFolder": "/workspace",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"version": "latest"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-dotnettools.csharp",
+				"ms-dotnettools.vscode-dotnet-runtime",
+				"ms-mssql.mssql",
+				"ms-dotnettools.blazor-tools",
+				"humao.rest-client",
+				"ms-vscode.makefile-tools",
+				"NuGetPackageManager.nugetpackagemanagerplus"
+			],
+			"settings": {
+				"dotnet.defaultSolutionOrFolder": "${workspaceFolder}"
+			}
+		}
+	},
+	"postCreateCommand": "dotnet --version && dotnet tool install -g dotnet-ef || true",
+	"forwardPorts": [5000, 5001, 1433],
+	"portsAttributes": {
+		"5000": {
+			"label": "Application HTTP",
+			"onAutoForward": "notify"
+		},
+		"5001": {
+			"label": "Application HTTPS",
+			"onAutoForward": "notify"
+		},
+		"1433": {
+			"label": "SQL Server",
+			"onAutoForward": "notify"
+		}
+	}
+}

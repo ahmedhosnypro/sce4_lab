@@ -1,0 +1,18 @@
+{
+    "recommendations": [
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.vscode-dotnet-runtime",
+        "ms-dotnettools.csdevkit",
+
+        "ms-vscode.makefile-tools",
+
+        "ms-mssql.data-workspace-vscode",
+        "ms-mssql.sql-bindings-vscode",
+        "cweijan.vscode-mysql-client2",
+        "cweijan.dbclient-jdbc",
+
+        "esbenp.prettier-vscode",
+
+        "maciejdems.add-to-gitignore"
+    ]
+}

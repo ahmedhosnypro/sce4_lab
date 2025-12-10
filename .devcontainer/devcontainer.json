@@ -13,15 +13,6 @@
 	},
 	"customizations": {
 		"vscode": {
-			"extensions": [
-				"ms-dotnettools.csharp",
-				"ms-dotnettools.vscode-dotnet-runtime",
-				"ms-mssql.mssql",
-				"ms-dotnettools.blazor-tools",
-				"humao.rest-client",
-				"ms-vscode.makefile-tools",
-				"NuGetPackageManager.nugetpackagemanagerplus"
-			],
 			"settings": {
 				"dotnet.defaultSolutionOrFolder": "${workspaceFolder}"
 			}

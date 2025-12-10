@@ -1,18 +1,24 @@
 {
-    "recommendations": [
-        "ms-dotnettools.csharp",
-        "ms-dotnettools.vscode-dotnet-runtime",
-        "ms-dotnettools.csdevkit",
+  "recommendations": [
+    "ms-dotnettools.csharp",
+    "ms-dotnettools.vscode-dotnet-runtime",
+    "ms-dotnettools.csdevkit",
+    "ms-dotnettools.blazor-tools",
+    "NuGetPackageManager.nugetpackagemanagerplus",
 
-        "ms-vscode.makefile-tools",
+    "ms-vscode.makefile-tools",
 
-        "ms-mssql.data-workspace-vscode",
-        "ms-mssql.sql-bindings-vscode",
-        "cweijan.vscode-mysql-client2",
-        "cweijan.dbclient-jdbc",
+    "ms-mssql.data-workspace-vscode",
+    "ms-mssql.sql-bindings-vscode",
+    "cweijan.vscode-mysql-client2",
+    "cweijan.dbclient-jdbc",
 
-        "esbenp.prettier-vscode",
+    "esbenp.prettier-vscode",
 
-        "maciejdems.add-to-gitignore"
-    ]
+    "maciejdems.add-to-gitignore",
+
+    "ms-mssql.mssql",
+    
+    "humao.rest-client"
+  ]
 }

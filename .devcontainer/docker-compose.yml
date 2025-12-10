@@ -4,7 +4,7 @@ services:
   devcontainer:
     build:
       context: ..
-      dockerfile: Dockerfile
+      dockerfile: .devcontainer/Dockerfile
     container_name: sce4_lab_dev
     volumes:
       - ..:/workspace:cached

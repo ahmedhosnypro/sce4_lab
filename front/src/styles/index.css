@@ -1,3 +1,6 @@
+@import './dark.css';
+@import './light.css';
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -8,9 +11,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-@import './dark.css';
-@import './light.css';
 
 @media (prefers-color-scheme: dark) {
   .system {

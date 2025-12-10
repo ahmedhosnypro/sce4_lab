@@ -1,6 +1,6 @@
+import './styles/App.css'
 import { useState, useEffect } from 'react'
 import EmployeeGrid from './components/EmployeeGrid'
-import './styles/App.css'
 
 function App() {
   const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system')

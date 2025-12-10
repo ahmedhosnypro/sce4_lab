@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { API_URL } from '../config';
 import '../styles/Employee.css';
 
@@ -18,7 +18,7 @@ function EmployeeGrid() {
 
 
   // Fetch all employees
-  const fetchEmployees = async () => {
+  const fetchEmployees = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
@@ -32,15 +32,15 @@ function EmployeeGrid() {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
   // Initial fetch
   useEffect(() => {
     fetchEmployees();
-  }, []);
+  }, [fetchEmployees]);
 
   // Fetch specific employee or all if empty
-  const fetchEmployeeById = async () => {
+  const fetchEmployeeById = useCallback(async () => {
     if (searchId.trim() === '') {
       fetchEmployees();
     } else {
@@ -59,9 +59,9 @@ function EmployeeGrid() {
         setLoading(false);
       }
     }
-  };
+  }, [searchId, fetchEmployees]);
 
-  const deleteEmployee = async (id: number) => {
+  const deleteEmployee = useCallback(async (id: number) => {
     if (!window.confirm('Are you sure you want to delete this employee?')) {
       return;
     }
@@ -72,7 +72,7 @@ function EmployeeGrid() {
       });
 
       if (response.ok) {
-        setEmployees(employees.filter((employee) => employee.id !== id));
+        setEmployees((prevEmployees) => prevEmployees.filter((employee) => employee.id !== id));
       } else {
         setError('Failed to delete employee');
       }
@@ -80,7 +80,13 @@ function EmployeeGrid() {
       setError('Error deleting employee');
       console.error('Error:', err);
     }
-  };
+  }, []);
+
+  const handleKeyDown = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      fetchEmployeeById();
+    }
+  }, [fetchEmployeeById]);
 
   return (
     <div className="employee-grid">
@@ -90,6 +96,7 @@ function EmployeeGrid() {
           placeholder="Enter Employee ID"
           value={searchId}
           onChange={(e) => setSearchId(e.target.value)}
+          onKeyDown={handleKeyDown}
         />
         <button onClick={fetchEmployeeById}>Search</button>
         <button onClick={fetchEmployees} className="button-secondary">

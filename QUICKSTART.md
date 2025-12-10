@@ -28,8 +28,7 @@ Now listening on: https://localhost:5001
 ### Terminal 2: Start the Frontend
 
 ```bash
-cd /workspaces/sce4_lab/front
-bun run dev
+bun dev
 ```
 
 **Expected output:**
